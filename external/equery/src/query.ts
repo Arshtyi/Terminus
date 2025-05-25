@@ -97,12 +97,15 @@ export async function query(
     synjonesAuth: string
 ): Promise<PluginResponse> {
     // 检查API密钥是否有效
-    if (!synjonesAuth) {
-        return failure("配置错误", "缺少有效的API密钥");
+    if (!synjonesAuth || synjonesAuth.trim() === "") {
+        return failure(
+            "配置错误",
+            "缺少有效的API密钥，请在插件配置中设置Synjones-Auth验证令牌"
+        );
     }
     const HEADERS = {
         "User-Agent":
-            "Mozilla/5.0 (Linux; Android 14; 23013RK75C Build/UKQ1.230804.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/131.0.6778.39 Mobile Safari/537.36/Synjones-E-Campus/2.3.24/&cn&/53",
+            "Mozilla/5.0 (Linux; Android 14; Build/UKQ1.230804.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/131.0.6778.39 Mobile Safari/537.36",
         "Content-Type": "application/x-www-form-urlencoded",
         Origin: "https://mcard.sdu.edu.cn",
         Referer: "https://mcard.sdu.edu.cn/charge-app/",

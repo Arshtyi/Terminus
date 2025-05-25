@@ -18,6 +18,7 @@
 
 -   [@zzysssigm](https://github.com/zzysssigm)
 -   [@Dregen-Yor](https://github.com/Dregen-Yor)
+-   [NapCat](https://github.com/NapNeko/NapCatQQ)
 -   [SDU-DeepSeek](https://github.com/futz12/SDU_DeepSeek)
 -   [SDU-QD-Electricity-Query-Script](https://github.com/Dregen-Yor/SDU-QD-Electricity-Query-Script)
 -   [Match-Reminder](https://github.com/zhuhiki/nonebot_plugin_matchreminder)

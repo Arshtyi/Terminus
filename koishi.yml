@@ -46,15 +46,21 @@ plugins:
       ygo.random:
         aliases:
           随机一卡: null
+      equery.setkey:
+        config:
+          hidden: true
+      royale.setkey:
+        config:
+          hidden: true
     help:obhg5j: {}
     http:1psr5v: {}
     ~inspect:byaek1: {}
     locales:5pdq3k: {}
     proxy-agent:6w3xbt: {}
     rate-limit:cmnftr: {}
-    telemetry:tysx2d: {}
+    telemetry:tysx2d:
+      mode: readonly
   group:console:
-    $collapsed: true
     actions:fyivso: {}
     analytics:fvfifx: {}
     android:3zpiab:
@@ -70,7 +76,8 @@ plugins:
     insight:fikyll: {}
     market:unzh9x:
       search:
-        endpoint: https://registry.koishi.chat/index.json
+        endpoint: https://koishi-registry.yumetsuki.moe/index.json
+      registry: {}
     notifier:l9kgoi: {}
     oobe:3hu87k: {}
     sandbox:xpfqe2: {}
@@ -106,6 +113,7 @@ plugins:
     ~adapter-whatsapp:xptnsm: {}
     ~adapter-zulip:tdqcr1: {}
   group:develop:
+    $collapsed: true
     adapter-onebot:q69abm:
       selfId: ${{env.BOT_SELF_ID}}
       token: ${{env.BOT_TOKEN}}
@@ -128,12 +136,15 @@ plugins:
     echo:me1fbn: {}
     who:dvv0mv: {}
   group:pdc22u:
+    vv:7c2lm0: {}
     hitokoto:elkhh0: {}
     $label: chat
     chat:2q28et: {}
-    vv:am1je0: {}
     match:udvhbr: {}
   group:1pdajz:
+    equery:5g2l3v:
+      apiKey: >-
+        eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJpc3N1c2VyIiwiYXVkIjoiYXVkaWVuY2UiLCJzbm8iOiIyMDI0MDAxMzAyNDIiLCJuYW1lIjoi5b2t6Z2W6L2pIiwiaWQiOjE3MDA2NTY4LCJsb2dpbkZyb20iOiJwYyIsInV1aWQiOiI0YjNjYjdmN2JlNjEzNjQyN2VjODEwYTRjMzUxYTA1NSIsImFjY291bnQiOiIyMDI0MDAxMzAyNDIifQ.yDk57tPDGksjlJx1wkBSLiAGwQVsspcu_V43ovGEKBs
     $label: sdu
     $filter:
       $or:
@@ -147,17 +158,14 @@ plugins:
             - $eq:
                 - $: guildId
                 - '763179099'
-    equery:pijisg:
-      apiKey: >-
-        eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJpc3N1c2VyIiwiYXVkIjoiYXVkaWVuY2UiLCJzbm8iOiIyMDI0MDAxMzAyNDIiLCJuYW1lIjoi5b2t6Z2W6L2pIiwiaWQiOjE3MDA2NTY4LCJsb2dpbkZyb20iOiJwYyIsInV1aWQiOiI0YjNjYjdmN2JlNjEzNjQyN2VjODEwYTRjMzUxYTA1NSIsImFjY291bnQiOiIyMDI0MDAxMzAyNDIifQ.yDk57tPDGksjlJx1wkBSLiAGwQVsspcu_V43ovGEKBs
   group:whcd52:
     $label: ygo
     ygo:bnukp0: {}
   group:9573lo:
-    $label: royale
-    royale:4wwbbs:
+    royale:mf9k88:
       apiKey: >-
-        eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjA5ZTQ1YTllLTVmY2EtNDEyYS04MDIyLWMyOGI4ODVjOTM5NiIsImlhdCI6MTc0NzA1NTczMiwic3ViIjoiZGV2ZWxvcGVyLzFjMjg4Y2VlLTI1ZTktNTZkYy1lZDYwLTJkMjU4Zjk3ZTE4NCIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIxMDEuNzYuMjQ4LjIzOSIsIjE4OC4yNTMuMTE1LjM1Il0sInR5cGUiOiJjbGllbnQifV19.B3blwU8pCa4Jq-dxV_7KE-OgaQ7rBAnY9n0xUBgOyfzTG-wzCDK2kCcFMI2Nj3R5mW5NyZ_06xClvWFrFv04TQ
+        eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjIxMDQ3NDZiLWQ1MTYtNDNhMS1hYmViLTQ2MmRiYjc4MzdiZCIsImlhdCI6MTc0NzYyMzI0NCwic3ViIjoiZGV2ZWxvcGVyLzFjMjg4Y2VlLTI1ZTktNTZkYy1lZDYwLTJkMjU4Zjk3ZTE4NCIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIxMDEuNzYuMjQ4LjIzOSIsIjIyMi4yMDYuMTguMTQ2IiwiMjIzLjgwLjExMC4zNiJdLCJ0eXBlIjoiY2xpZW50In1dfQ.6ZC5_i_8bGi1RyfC9aUkd0UvBDF7q8owwW2REr4f7FCvdC5kE4KldJjZSnNmix4JWwHyhXUOVX5AS0coSzIUug
+    $label: royale
 prefix:
   - /
 nickname:

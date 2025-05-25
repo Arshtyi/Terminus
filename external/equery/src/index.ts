@@ -10,20 +10,42 @@ export interface Config {
 }
 
 export const Config: Schema<Config> = Schema.object({
-    apiKey: Schema.string().description("验证令牌").required(),
+    apiKey: Schema.string()
+        .description("验证令牌（Synjones-Auth值）")
+        .default("")
+        .required(false),
 });
 
 export function apply(ctx: Context, config: Config) {
+    // 设置 API 密钥的命令
+    ctx.command("equery.setkey <key:string>", "设置API密钥")
+        .option("admin", "-a 需要管理员权限", { authority: 3 })
+        .action(async ({ session, options }, key) => {
+            if (!key || key.trim() === "") {
+                return formatResponse(
+                    failure("参数不足", "请提供有效的API密钥")
+                );
+            }
+
+            // 更新配置
+            config.apiKey = key.trim();
+
+            return formatResponse(
+                success("配置成功", "API密钥已成功设置，此设置将在重启后失效")
+            );
+        });
+
+    // 主命令 - 查询电量
     ctx.command("equery <building> <room>", "查询山东大学青岛校区宿舍剩余电量")
         .usage(usage)
         .example("equery S1 A101 查询 S1 A101 的电量")
         .action(async (_, building, room) => {
             // 检查API密钥是否设置
-            if (!config.apiKey) {
+            if (!config.apiKey || config.apiKey.trim() === "") {
                 return formatResponse(
                     failure(
                         "配置错误",
-                        "未设置必要的API密钥，请在插件配置中设置"
+                        "未设置必要的API密钥，请在插件配置中设置Synjones-Auth验证令牌"
                     )
                 );
             }

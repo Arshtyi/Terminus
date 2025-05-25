@@ -8,9 +8,12 @@ export async function playerinfo(tag: string, apiKey: string): Promise<string> {
         return formatResponse(failure("参数不足", "请输入玩家tag"));
     }
 
-    if (!apiKey) {
+    if (!apiKey || apiKey.trim() === "") {
         return formatResponse(
-            failure("配置错误", "未设置API密钥，请在插件配置中设置")
+            failure(
+                "配置错误",
+                "未设置API密钥，请在插件配置中设置 Clash Royale API密钥 (可从 https://developer.clashroyale.com 申请)"
+            )
         );
     }
 

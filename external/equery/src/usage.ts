@@ -4,6 +4,7 @@
 export const usage = `
 ## 命令说明
 * \`equery <building> <room>\` - 查询山东大学青岛校区宿舍剩余电量。
+* \`equery.setkey <key>\` - 设置API密钥（需要管理员权限）。
 
 ## 参数说明
 * \`building\` - 宿舍楼号，如 S1、S2、T1、B1 等，不区分大小写。
@@ -13,11 +14,14 @@ export const usage = `
 * \`equery S1 A101\` - 查询 S1 宿舍楼 A101 房间的电量。
 
 ## 配置说明
-* 请在插件设置页面配置API密钥（验证令牌）。
+* 请在插件设置页面配置API密钥（Synjones-Auth验证令牌）
+* 您需要使用抓包工具获取请求头中的Synjones-Auth值
+* 也可以使用命令 \`equery.setkey <key>\` 直接设置（管理员权限）
 * 支持的宿舍楼：T1-T3、S1-S2、S5-S11、B1-B2、B5、B9-B10。
 
 ## 故障排除
 如果查询失败，请检查：
 1. 宿舍楼号和房间号是否正确
-2. 验证令牌是否有效或已过期
+2. API密钥（Synjones-Auth）是否已正确配置，且未过期
+3. 如果API密钥失效，请重新获取
 `;

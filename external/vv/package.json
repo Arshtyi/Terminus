@@ -8,6 +8,14 @@
         "lib",
         "dist"
     ],
+    "contributors": [
+        "Arshtyi <arshtyi_trantor@outlook.com>"
+    ],
+    "homepage": "https://github.com/Arshtyi/koishi-plugin-vv",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Arshtyi/koishi-plugin-vv.git"
+    },
     "license": "MIT",
     "scripts": {
         "build": "tsc -b && koishi-console build",
@@ -34,7 +42,7 @@
     },
     "devDependencies": {
         "@koishijs/client": "^5.28.0",
-        "@koishijs/components": "^5.28.0",
+        "@koishijs/components": "^1.5.19",
         "sass": "^1.72.0",
         "vue": "^3.4.21",
         "@types/node": "^20.10.0",
