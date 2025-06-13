@@ -12,3 +12,4 @@
 -   [Match-Reminder](https://github.com/zhuhiki/nonebot_plugin_matchreminder)
 -   [VV](https://github.com/MemeMeow-Studio/MemeMeow)
 -   [MDPro3](https://code.moenext.com/sherry_chaos/MDPro3)
+-   [canvas-yugioh-card](https://github.com/kooriookami/yugioh-card)
