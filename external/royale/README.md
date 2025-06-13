@@ -43,22 +43,3 @@ npm install koishi-plugin-royale
 /royale.playerinfo #玩家标签
 /royale.claninfo #部落标签
 ```
-
-例如：
-
--   `/royale.playerinfo #CJ2L9PGLG` - 查询此标签玩家的信息
--   `/royale.claninfo #2LUGUPJ` - 查询此标签部落的信息
-
-### 设置 API 密钥
-
-管理员可以直接通过命令设置 API 密钥（无需进入 WebUI 配置）：
-
-```
-royale.setkey <密钥>
-```
-
-注意：通过命令设置的 API 密钥在重启后会失效，若需永久保存，请在 WebUI 中配置。
-
-## API 密钥获取
-
-访问 https://developer.clashroyale.com 注册并创建新的 API 密钥
