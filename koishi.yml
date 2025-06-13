@@ -1,0 +1,187 @@
+plugins:
+  group:server:
+    $collapsed: true
+    server:m2hm0f:
+      port: 5140
+      maxPort: 5149
+    ~server-satori:7ows35: {}
+    ~server-temp:ppyaba: {}
+  group:basic:
+    $collapsed: true
+    ~admin:5y7w29: {}
+    ~bind:0i1owj: {}
+    commands:ix1s8v:
+      clear:
+        aliases:
+          clear:
+            filter: false
+      command:
+        aliases:
+          command:
+            filter: false
+        config:
+          hidden: true
+      plugin:
+        aliases:
+          plugin:
+            filter: false
+        config:
+          hidden: true
+      timer:
+        aliases:
+          timer:
+            filter: false
+        config:
+          hidden: true
+      usage:
+        aliases:
+          usage:
+            filter: false
+        config:
+          hidden: true
+      status:
+        config:
+          permissions:
+            - authority:4
+          hidden: true
+        aliases:
+          status:
+            filter: false
+      ygo.random:
+        aliases:
+          随机一卡: null
+      equery.setkey:
+        config:
+          hidden: true
+      royale.setkey:
+        config:
+          hidden: true
+      info:
+        config:
+          permissions:
+            - authority:4
+          showGpu: true
+          showNetwork: true
+          hidden: true
+      echo:
+        config:
+          hidden: true
+      help:
+        config:
+          hidden: true
+    help:obhg5j: {}
+    http:1psr5v: {}
+    ~inspect:byaek1: {}
+    locales:5pdq3k: {}
+    proxy-agent:6w3xbt: {}
+    rate-limit:cmnftr: {}
+    telemetry:tysx2d:
+      mode: readonly
+  group:console:
+    $collapsed: true
+    actions:fyivso: {}
+    analytics:fvfifx: {}
+    android:3zpiab:
+      $if: env.KOISHI_AGENT?.includes('Android')
+    config:9zug16: {}
+    console:hsf3s1:
+      open: true
+    dataview:hy6wet: {}
+    desktop:1kxk0z:
+      $if: env.KOISHI_AGENT?.includes('Desktop')
+    explorer:vpyaqo: {}
+    logger:1gu8ta: {}
+    insight:fikyll: {}
+    market:unzh9x:
+      search:
+        endpoint: https://koishi-registry.yumetsuki.moe/index.json
+      registry: {}
+    notifier:l9kgoi: {}
+    oobe:3hu87k: {}
+    sandbox:xpfqe2: {}
+    status:qtuk9l: {}
+    theme-vanilla:5fzeyv: {}
+  group:storage:
+    $collapsed: true
+    ~database-mongo:m6sw1b:
+      database: koishi
+    ~database-mysql:zkgbbw:
+      database: koishi
+    ~database-postgres:s631nc:
+      database: koishi
+    database-sqlite:lglxa1:
+      path: data/koishi.db
+    assets-local:jjv7mt: {}
+  group:adapter:
+    $collapsed: true
+    ~adapter-dingtalk:rduom0: {}
+    ~adapter-discord:uo9h8x: {}
+    ~adapter-kook:3bhmvg: {}
+    ~adapter-lark:8t03k8: {}
+    ~adapter-line:rsnrh7: {}
+    ~adapter-mail:nm2n1r: {}
+    ~adapter-matrix:b4afr0: {}
+    ~adapter-qq:mybsbp:
+      type: public
+    ~adapter-satori:ybf029: {}
+    ~adapter-slack:4a8ipj: {}
+    ~adapter-telegram:3wuio4: {}
+    ~adapter-wechat-official:ezzhzz: {}
+    ~adapter-wecom:2wpij9: {}
+    ~adapter-whatsapp:xptnsm: {}
+    ~adapter-zulip:tdqcr1: {}
+  group:develop:
+    github-og:sa5mzy: {}
+    adapter-onebot:q69abm:
+      selfId: ${{env.BOT_SELF_ID}}
+      token: ${{env.BOT_TOKEN}}
+      retryTimes: 3
+      retryInterval: 3000
+      proxyAgent: http://127.0.0.1:7890
+      request:
+        timeout: 20000
+    $if: env.NODE_ENV === 'development'
+    auth:gla2ha:
+      admin:
+        username: ${{env.MY_NAME}}
+        password: ${{env.MY_PASSWORD}}
+    hmr:cw97hs:
+      root: .
+    echo:me1fbn: {}
+    who:dvv0mv: {}
+    info:lv6d54: {}
+  group:pdc22u:
+    hitokoto:elkhh0: {}
+    $label: chat
+    chat:2q28et: {}
+    match:udvhbr: {}
+    vv:t7b339: {}
+  group:1pdajz:
+    equery:5g2l3v:
+      apiKey: >-
+        eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJpc3N1c2VyIiwiYXVkIjoiYXVkaWVuY2UiLCJzbm8iOiIyMDI0MDAxMzAyNDIiLCJuYW1lIjoi5b2t6Z2W6L2pIiwiaWQiOjE3MDA2NTY4LCJsb2dpbkZyb20iOiJwYyIsInV1aWQiOiI0YjNjYjdmN2JlNjEzNjQyN2VjODEwYTRjMzUxYTA1NSIsImFjY291bnQiOiIyMDI0MDAxMzAyNDIifQ.yDk57tPDGksjlJx1wkBSLiAGwQVsspcu_V43ovGEKBs
+    $label: sdu
+    $filter:
+      $or:
+        - $eq:
+            - $: userId
+            - '640006128'
+        - $and:
+            - $eq:
+                - $: isDirect
+                - false
+            - $eq:
+                - $: guildId
+                - '763179099'
+  group:whcd52:
+    ygo:vjwaoo: {}
+    $label: ygo
+  group:9573lo:
+    $label: royale
+    royale:ve3uwp:
+      apiKey: >-
+        eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjIxMDQ3NDZiLWQ1MTYtNDNhMS1hYmViLTQ2MmRiYjc4MzdiZCIsImlhdCI6MTc0NzYyMzI0NCwic3ViIjoiZGV2ZWxvcGVyLzFjMjg4Y2VlLTI1ZTktNTZkYy1lZDYwLTJkMjU4Zjk3ZTE4NCIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIxMDEuNzYuMjQ4LjIzOSIsIjIyMi4yMDYuMTguMTQ2IiwiMjIzLjgwLjExMC4zNiJdLCJ0eXBlIjoiY2xpZW50In1dfQ.6ZC5_i_8bGi1RyfC9aUkd0UvBDF7q8owwW2REr4f7FCvdC5kE4KldJjZSnNmix4JWwHyhXUOVX5AS0coSzIUug
+prefix:
+  - /
+nickname:
+  - Terminus

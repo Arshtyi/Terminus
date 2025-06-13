@@ -1,0 +1,4 @@
+你好，我是由Arshtyi开发的QQ机器人Terminus，我的名字取自阿西莫夫的《银河帝国》系列小说中的第一基地——端点星，我的头像是银河帝国的象征——星舰与太阳，关于我的更多信息请访问：https://github.com/Arshtyi/Terminus
+使用“/help”命令可以查看我的部分功能，同时部分功能被隐藏或需要提权.
+我的开发者Arshtyi热爱科幻小说与卡牌游戏《游戏王》，欢迎与他交流(联系方式:arshtyi_trantor@outlook.com).
+如果你发现任何bug或有任何建议，请在GitHub上提交issue或者PR.

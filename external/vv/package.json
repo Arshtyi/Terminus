@@ -1,0 +1,59 @@
+{
+    "name": "koishi-plugin-vv",
+    "description": "输出VV梗图",
+    "version": "1.0.0",
+    "main": "lib/index.js",
+    "typings": "lib/index.d.ts",
+    "files": [
+        "lib",
+        "dist"
+    ],
+    "contributors": [
+        "Arshtyi <arshtyi_trantor@outlook.com>"
+    ],
+    "homepage": "https://github.com/Arshtyi/koishi-plugin-vv",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Arshtyi/koishi-plugin-vv.git"
+    },
+    "license": "MIT",
+    "scripts": {
+        "build": "tsc -b && koishi-console build",
+        "compile": "tsc -b && koishi-console build && npm pack"
+    },
+    "keywords": [
+        "chatbot",
+        "koishi",
+        "plugin",
+        "vv",
+        "meme"
+    ],
+    "koishi": {
+        "service": {
+            "required": [
+                "http"
+            ]
+        },
+        "browser": true,
+        "description": {
+            "en": "Output VV meme images",
+            "zh-CN": "输出VV梗图"
+        }
+    },
+    "devDependencies": {
+        "@koishijs/client": "^5.28.0",
+        "@koishijs/components": "^1.5.19",
+        "sass": "^1.72.0",
+        "vue": "^3.4.21",
+        "@types/node": "^20.10.0",
+        "atsc": "^1.0.0",
+        "koishi": "^4.18.7",
+        "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "axios": "^1.6.0"
+    },
+    "peerDependencies": {
+        "koishi": "^4.18.7"
+    }
+}

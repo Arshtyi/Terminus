@@ -1,0 +1,54 @@
+{
+    "name": "koishi-plugin-equery",
+    "description": "山东大学青岛校区宿舍剩余电量查询",
+    "version": "1.0.0",
+    "main": "lib/index.js",
+    "typings": "lib/index.d.ts",
+    "files": [
+        "lib",
+        "dist"
+    ],
+    "contributors": [
+        "Arshtyi <arshtyi_trantor@outlook.com>"
+    ],
+    "homepage": "https://github.com/Arshtyi/koishi-plugin-equery",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Arshtyi/koishi-plugin-equery.git"
+    },
+    "license": "MIT",
+    "scripts": {
+        "build": "tsc -b && koishi-console build",
+        "compile": "tsc -b && koishi-console build && npm pack"
+    },
+    "keywords": [
+        "chatbot",
+        "koishi",
+        "plugin",
+        "SDU",
+        "Electricity",
+        "Dormitory",
+        "Query"
+    ],
+    "devDependencies": {
+        "@koishijs/client": "^5.28.0",
+        "@koishijs/components": "^1.5.19",
+        "@types/node": "^20.10.0",
+        "sass": "^1.72.0",
+        "typescript": "^5.3.0",
+        "vue": "^3.4.21"
+    },
+    "peerDependencies": {
+        "koishi": "^4.18.7"
+    },
+    "koishi": {
+        "browser": true,
+        "description": {
+            "en": "Shandong University (Qingdao) Dorm Electricity Query",
+            "zh-CN": "山东大学青岛校区宿舍剩余电量查询"
+        }
+    },
+    "dependencies": {
+        "axios": "^1.9.0"
+    }
+}
