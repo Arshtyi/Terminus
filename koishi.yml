@@ -1,0 +1,157 @@
+plugins:
+  group:server:
+    $collapsed: true
+    server:142chw:
+      port: 5140
+      maxPort: 5149
+    ~server-satori:pttre1: {}
+    ~server-temp:bs1k0h: {}
+  group:basic:
+    $collapsed: true
+    admin:xzypx4: {}
+    ~bind:3o3o8o: {}
+    commands:6ubgf6:
+      channel:
+        aliases:
+          channel:
+            filter: false
+        config:
+          hidden: true
+      clear:
+        aliases:
+          clear:
+            filter: false
+        config:
+          hidden: true
+      command:
+        aliases:
+          command:
+            filter: false
+        config:
+          hidden: true
+      plugin:
+        aliases:
+          plugin:
+            filter: false
+        config:
+          hidden: true
+      timer:
+        aliases:
+          timer:
+            filter: false
+        config:
+          hidden: true
+      usage:
+        aliases:
+          usage:
+            filter: false
+        config:
+          hidden: true
+      user:
+        aliases:
+          user:
+            filter: false
+        config:
+          hidden: true
+      status:
+        config:
+          permissions:
+            - authority:4
+          hidden: true
+        aliases:
+          status:
+            filter: false
+      inspect:
+        config:
+          hidden: true
+    help:nmj3jo: {}
+    http:u6m1lc: {}
+    inspect:kenrv0: {}
+    locales:4mr20x: {}
+    proxy-agent:cjbohu: {}
+    rate-limit:l5ti5s: {}
+    telemetry:f7si1t:
+      mode: readonly
+  group:console:
+    $collapsed: true
+    actions:5ljh65: {}
+    analytics:k2nxw6: {}
+    android:jcpntw:
+      $if: env.KOISHI_AGENT?.includes('Android')
+    auth:rgs3ok:
+      admin:
+        username: Arshtyi
+        password: 8956230X
+    config:p86ib4: {}
+    console:1yhfiz:
+      open: true
+    dataview:9bcved: {}
+    desktop:vxh3cs:
+      $if: env.KOISHI_AGENT?.includes('Desktop')
+    explorer:ttiivm: {}
+    logger:h3xz04: {}
+    insight:7jksw3: {}
+    market:4euvve:
+      search:
+        endpoint: https://koishi-registry.yumetsuki.moe/index.json
+    notifier:qnujk0: {}
+    oobe:mf1r4t: {}
+    sandbox:ribtrm: {}
+    status:6dxb6d: {}
+    theme-vanilla:tx8vac: {}
+  group:storage:
+    $collapsed: true
+    ~database-mongo:gw8akh:
+      database: koishi
+    ~database-mysql:qi8w29:
+      database: koishi
+    ~database-postgres:8btag1:
+      database: koishi
+    database-sqlite:3ufi9q:
+      path: data/koishi.db
+    assets-local:wndquf: {}
+  group:adapter:
+    ~adapter-dingtalk:2jhpwv: {}
+    ~adapter-discord:q6ka0r: {}
+    ~adapter-kook:zwrnqs: {}
+    ~adapter-lark:amdmqu: {}
+    ~adapter-line:g6d87w: {}
+    ~adapter-mail:hvfez1: {}
+    ~adapter-matrix:gykks4: {}
+    ~adapter-qq:kjrj92: {}
+    ~adapter-satori:ve1p9i: {}
+    ~adapter-slack:047e0a: {}
+    ~adapter-telegram:7h6bn8: {}
+    ~adapter-wechat-official:yhwj2q: {}
+    ~adapter-wecom:b22fz8: {}
+    ~adapter-whatsapp:355246: {}
+    adapter-onebot:ftn50n:
+      selfId: '3428991389'
+      token: 0397005c5858
+    ~adapter-zulip:fpvpen: {}
+  group:develop:
+    $collapsed: true
+    $if: env.NODE_ENV === 'development'
+    hmr:x3yx1u:
+      root: .
+  group:tmgycj:
+    vv:sbn80r: {}
+    github-opengraph:9x1huh: {}
+    hitokoto:rdmmpj: {}
+    echo:kklo6d: {}
+    $label: chat
+  group:y70rtr:
+    $label: game
+    yugioh-cards:z93rr8: {}
+  group:315s6k:
+    equery:9f1cs0:
+      apiKey: >-
+        eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJpc3N1c2VyIiwiYXVkIjoiYXVkaWVuY2UiLCJzbm8iOiIyMDI0MDAxMzAyNDIiLCJuYW1lIjoi5b2t6Z2W6L2pIiwiaWQiOjE3MDA2NTY4LCJsb2dpbkZyb20iOiJwYyIsInV1aWQiOiJjOGMxMDJjMDc1NjdjZjQ5NzAwZDI5ZWJkMDJjZTVlZSIsImFjY291bnQiOiIyMDI0MDAxMzAyNDIifQ.O7xBSJkdhewaLHFtmtqwx39wk1xUxEevpZSXOgbsPdE
+    $label: sdu
+  group:gnwfwu:
+    oi-match-query:bkf21r: {}
+    $label: code
+prefix:
+  - /
+nickname:
+  - Terminus
